@@ -1,0 +1,134 @@
+{% extends 'list_item_info/base.html' %}
+	
+
+
+	{% block link %}
+		<link rel="stylesheet" href="http://127.0.0.1:8000/static/css/catalog.css">
+	{% endblock link %}
+
+
+	{% block name_page %}
+		Список товаров
+	{% endblock %}
+
+
+
+
+    {% block content %}
+ 		{% for item in object_list %}
+
+
+
+			<div class="item  col-sm-4
+			{% if item.get_chet %}
+				col-sm-offset-1
+			{% else %}
+				col-sm-offset-2
+			{% endif %}
+			 ">
+				<a href=" {{ item.get_absolute_url }}">
+					<div class="img-box">
+						<img src="http://127.0.0.1:8000/static/img/{{ item.get_id }}.jpg" class="img-item">
+					</div>
+
+					<p>{{ item.title }}</p>
+				</a>
+				<p class="price">{{ item.price }}</p>
+
+				<div class="btns">
+					<div class="btn buy">
+						<a href="#buy-item" class="popup" onClick="InsertID({{ item.get_id }})">Купить</a>
+					</div>
+					
+					
+					<div class="btn details">
+						<a href="{{ item.get_absolute_url }}">Подробнее</a>
+					</div>
+				</div>
+			</div>
+
+
+
+		{% endfor %}
+	{% endblock content %}
+
+
+	{% block hid %}
+	<!-- PopUp window -->
+			<div class="hidden" >
+				<form id="buy-item">
+					
+					<input type="text" name="name" placeholder="Имя:" id="name" required><br>
+
+					
+					<input type="text" name="phone" placeholder="Телефон:" id="phone" required><br>
+					<p class="external_text">Когда Вам удобно принять звонок:</p>
+		<div class="input_set">
+					<div class="input_date">
+							<div class="input_text">
+								<p>Дата</p>
+							</div>
+						<select name="date" id="date" >
+							
+						</select>
+					</div>
+				
+					<div class="input_time">
+						<div class="input_text">
+							<p>Время</p>
+						</div>
+
+						<span class="white">c&nbsp</span>
+						<select name="time_from" id="time_from">
+							<option value="12:00" selected>12:00</option>
+							<option value="12:30">12:30</option>
+							<option value="13:00">13:00</option>
+							<option value="13:30">13:30</option>
+							<option value="14:00">14:00</option>
+							<option value="14:30">14:30</option>
+							<option value="15:00">15:00</option>
+							<option value="15:30">15:30</option>
+							<option value="16:00">16:00</option>
+							<option value="16:30">16:30</option>
+							<option value="17:00">17:00</option>
+							<option value="17:30">17:30</option>
+							<option value="18:00">18:00</option>
+							<option value="18:30">18:30</option>
+							<option value="19:00">19:00</option>
+							<option value="19:30">19:30</option>
+							<option value="20:00">20:00</option>
+						</select>&nbsp
+					
+				<span style="white-space: nowrap;">
+						<span class="white">до&nbsp</span>
+						<select name="time_to" id="time_to">
+							<option value="12:00">12:00</option>
+							<option value="12:30">12:30</option>
+							<option value="13:00">13:00</option>
+							<option value="13:30">13:30</option>
+							<option value="14:00">14:00</option>
+							<option value="14:30">14:30</option>
+							<option value="15:00">15:00</option>
+							<option value="15:30">15:30</option>
+							<option value="16:00">16:00</option>
+							<option value="16:30">16:30</option>
+							<option value="17:00">17:00</option>
+							<option value="17:30">17:30</option>
+							<option value="18:00">18:00</option>
+							<option value="18:30">18:30</option>
+							<option value="19:00">19:00</option>
+							<option value="19:30">19:30</option>
+							<option value="20:00" selected="">20:00</option>
+						</select>
+				</span>
+					</div>
+			</div>
+					<p class="external_text">Подробности заявки:</p>
+					<textarea name="details" rows="6"></textarea>
+					<input type="hidden" name="id" value="" id="hidden_input">
+					<button class="send">Отправить заявку</button>
+				</form>
+			</div>
+	<!-- End PopUp -->
+	{% endblock %}
+

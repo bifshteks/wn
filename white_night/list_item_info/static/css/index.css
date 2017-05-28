@@ -1,0 +1,17 @@
+ol {
+  margin: 0 10px 0 20px;
+}
+
+img:nth-child(odd) {
+	float: left;
+}
+
+img:nth-child(even) {
+	float: right;
+}
+
+@media (min-width: 768px) {
+  .navbar-collapse .col-sm-2:nth-child(1){
+  border-bottom: 5px solid white !important;
+  }
+}
