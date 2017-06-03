@@ -7,7 +7,7 @@ $(document).ready(function() {
 			url: "js/mail.php",
 			data: $(this).serialize()
 		}).done(function() {
-			alert("Спасибо за заявку! Скоро мы вам перезвоним!")
+			alert("Спасибо за заявку! Скоро мы вам перезвоним!");
 		})
 		return false;
 	})

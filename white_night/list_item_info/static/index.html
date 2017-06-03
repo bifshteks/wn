@@ -28,12 +28,16 @@
 
 				<div class="row navigate colapse navbar-collapse"
 				  id="bs-example-navbar-collapse-1"> 
-					<div class="col-sm-2 col-sm-offset-3 header-text nav-text" style="border-bottom: 5px solid white">
-						<a href="index.html">Главная</a></div>
+					<div class="col-sm-2 col-sm-offset-3 header-text nav-text" style="
+					@media (min-width: 768px) {
+						border-bottom: 5px solid white;
+					}
+					">
+						<a href="http://127.0.0.1:8000/static/index.html">Главная</a></div>
 					<div class="col-sm-2 header-text nav-text">
-						<a href="catalog.html">Список товаров</a></div>
+						<a href="http://127.0.0.1:8000/item/">Список товаров</a></div>
 					<div class="col-sm-2 header-text nav-text">
-						<a href="contacts.html">Контакты</a>
+						<a href="http://127.0.0.1:8000/static/contacts.html">Контакты</a>
 					</div>
 				</div>
 			</nav>

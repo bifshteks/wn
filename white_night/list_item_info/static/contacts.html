@@ -31,11 +31,16 @@
 				<div class="row navigate colapse navbar-collapse"
 				  id="bs-example-navbar-collapse-1"> 
 					<div class="col-sm-2 col-sm-offset-3 header-text nav-text">
-						<a href="index.html">Главная</a></div>
+						<a href="http://127.0.0.1:8000/static/index.html">Главная</a></div>
 					<div class="col-sm-2 header-text nav-text">
-						<a href="catalog.html">Список товаров</a></div>
-					<div class="col-sm-2 header-text nav-text"  style="border-bottom: 5px solid white">
-						<a href="contacts.html">Контакты</a>
+						<a href="http://127.0.0.1:8000/item/">Список товаров</a>
+					</div>
+					<div class="col-sm-2 header-text nav-text"  style="
+					@media (min-width: 768px) {
+						border-bottom: 5px solid white;
+					}
+					">
+						<a href="http://127.0.0.1:8000/static/contacts.html">Контакты</a>
 					</div>
 				</div>
 			</nav>
@@ -186,6 +191,7 @@
 <script src="http://127.0.0.1:8000/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot"></script>
 <script src="http://127.0.0.1:8000/static/js/common.js"></script>
 <script src="http://127.0.0.1:8000/static/js/jquery.magnific-popup.js"></script>
+<script src="http://127.0.0.1:8000/static/js/mail.php"></script>
 <script>
 	$(function(){
 		var date = new Date();
@@ -216,6 +222,13 @@
 
 
 
+});
+</script>
+<script src="http://127.0.0.1:8000/static/js/jquery.maskedinput.min.js"></script>
+<script>
+
+$(function(){
+  $("#phone").mask("8(999) 999-99-99");
 });
 </script>
 </div>

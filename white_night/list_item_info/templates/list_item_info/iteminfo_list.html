@@ -3,7 +3,11 @@
 
 
 	{% block link %}
+	
 		<link rel="stylesheet" href="http://127.0.0.1:8000/static/css/catalog.css">
+		<link rel="stylesheet" href="http://127.0.0.1:8000/static/css/magnific-popup.css">
+		<link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/static/css/magnific-popup.css">
+		<link rel="stylesheet" type="application/octet-stream" href="http://127.0.0.1:8000/static/css/bootstrap.css.map">
 	{% endblock link %}
 
 
@@ -26,9 +30,9 @@
 				col-sm-offset-2
 			{% endif %}
 			 ">
-				<a href=" {{ item.get_absolute_url }}">
+				<a href="{{ item.get_absolute_url }}">
 					<div class="img-box">
-						<img src="http://127.0.0.1:8000/static/img/{{ item.get_id }}.jpg" class="img-item">
+						<img src="{{ item.img1.url }}" class="img-item">
 					</div>
 
 					<p>{{ item.title }}</p>
@@ -132,3 +136,43 @@
 	<!-- End PopUp -->
 	{% endblock %}
 
+
+	{% block script %}
+<script src="http://127.0.0.1:8000/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="http://127.0.0.1:8000/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot"></script>
+<script src="http://127.0.0.1:8000/static/js/jquery.maskedinput.min.js"></script>
+<script src="http://127.0.0.1:8000/static/js/mail.php"></script>
+<script>
+
+
+$(function(){
+  $("#phone").mask("8(999) 999-99-99");
+});
+</script>
+
+<script>
+	$(function(){
+		var date = new Date();
+		var day = date.getDate();
+		var month = date.getMonth();
+		var year = date.getFullYear();
+		for (i = 0; i < 8; i++){
+			var foo = new Date(year, month, day + i+1);
+			var foo_day = foo.getDate();
+			var foo_month = foo.getMonth(); 
+
+			monthA = 'января,февраля,марта,апреля,мая,июня,июля,августа,сенября,октября,ноября,декабря'.split(',');
+
+			document.getElementById("date").options[i] = new Option(foo_day + ' ' + monthA[foo_month], foo_day + ' ' + monthA[foo_month]);
+
+
+
+			// date.setDate(date.getDate() + i);
+
+
+
+		};
+
+	});
+</script>
+	{% endblock %}
