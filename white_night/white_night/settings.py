@@ -27,8 +27,16 @@ SECRET_KEY = '#*f5$e_^9gd59*$4pi^^z7i%61b+b&$67xsdl_@#*%ns+7l2=q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ADMINS = (
+	('Artem', 'artem.pif@mail.ru'),
+)
 
+ALLOWED_HOSTS = [
+    '188.226.156.159',
+    'whitenight.info',
+]
+
+CSRF_COOKIE_SECURE = True
 
 # Application definition
 
@@ -58,7 +66,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-        	'/home/artem/alex/white_night/list_item_info/templates'
+        	# '/home/artem/alex/white_night/list_item_info/templates'
+            (os.path.join(BASE_DIR, 'list_item_info/templates') ),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -123,15 +132,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+
+STATIC_ROOT = (os.path.join(BASE_DIR, 'list_item_info/static/test/'))
 STATIC_URL = '/static/'
 
-#STATICFILES_DIRS = (
-#    os.path.join(BASE_DIR, 'static'),
-#)
 
-STATIC_ROOT = (os.path.join(BASE_DIR, 'list_item_info/static'), )
 
 
 
 MEDIA_ROOT = (os.path.join(BASE_DIR, 'list_item_info/static/img/db_img/') )
-MEDIA_URL = 'http://127.0.0.1:8000/static/img/db_img/'
+MEDIA_URL = 'http://whitenight.info/static/img/db_img/'

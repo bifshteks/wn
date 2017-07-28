@@ -18,3 +18,8 @@ class PostDetailView(DetailView): # детализированное предс�
 	def iteminfo_detail(request, pk):
 		item = get_object_or_404(ItemInfo, pk=pk)
 		return render(request, 'list_item_info/iteminfo_detail.html', {'item': item})
+
+
+
+
+

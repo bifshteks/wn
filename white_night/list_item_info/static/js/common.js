@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	$(".popup").magnificPopup();
 
-	$(".send").submit(function() {
+	$(".send").click(function() {
 		$.ajax ({
 			type: "POST",
 			url: "js/mail.php",
@@ -9,6 +9,7 @@ $(document).ready(function() {
 		}).done(function() {
 			alert("Спасибо за заявку! Скоро мы вам перезвоним!");
 		})
+
 		return false;
 	})
 })

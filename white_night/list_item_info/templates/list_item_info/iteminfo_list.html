@@ -4,10 +4,10 @@
 
 	{% block link %}
 	
-		<link rel="stylesheet" href="http://127.0.0.1:8000/static/css/catalog.css">
-		<link rel="stylesheet" href="http://127.0.0.1:8000/static/css/magnific-popup.css">
-		<link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/static/css/magnific-popup.css">
-		<link rel="stylesheet" type="application/octet-stream" href="http://127.0.0.1:8000/static/css/bootstrap.css.map">
+		<link rel="stylesheet" href="http://whitenight.info/static/css/catalog.css">
+		<link rel="stylesheet" href="http://whitenight.info/static/css/magnific-popup.css">
+		<link rel="stylesheet" type="text/css" href="http://whitenight.info/static/css/magnific-popup.css">
+		<link rel="stylesheet" type="application/octet-stream" href="http://whitenight.info/static/css/bootstrap.css.map">
 	{% endblock link %}
 
 
@@ -61,7 +61,7 @@
 	<!-- PopUp window -->
 			<div class="hidden" >
 				<form id="buy-item">
-					
+					{% csrf_token %}
 					<input type="text" name="name" placeholder="Имя:" id="name" required><br>
 
 					
@@ -138,10 +138,10 @@
 
 
 	{% block script %}
-<script src="http://127.0.0.1:8000/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-<script src="http://127.0.0.1:8000/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot"></script>
-<script src="http://127.0.0.1:8000/static/js/jquery.maskedinput.min.js"></script>
-<script src="http://127.0.0.1:8000/static/js/mail.php"></script>
+<script src="http://whitenight.info/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="http://whitenight.info/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot"></script>
+<script src="http://whitenight.info/static/js/jquery.maskedinput.min.js"></script>
+<script src="http://whitenight.info/static/js/mail.php"></script>
 <script>
 
 

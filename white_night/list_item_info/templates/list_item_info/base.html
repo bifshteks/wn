@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-{% load staticfiles %}
+
 
 <html>
 <head>
 	<title>Test my</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="stylesheet" href="http://127.0.0.1:8000/static/css/main.css">
-	<link rel="stylesheet" href="http://127.0.0.1:8000/static/css/bootstrap.css">
+	<link rel="stylesheet" href="http://whitenight.info/static/css/main.css">
+	<link rel="stylesheet" href="http://whitenight.info/static/css/bootstrap.css">
 	{% block link %}
 	{% endblock %}
 	<link href="http://allfont.ru/allfont.css?fonts=b52" rel="stylesheet" type="text/css" />
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet"> 
-	<link rel="shortcut icon" href="http://127.0.0.1:8000/static/img/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="http://whitenight.info/static/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
 <div class="wrapper">
@@ -26,18 +26,18 @@
 					        <span class="icon-bar"></span>
 					        <span class="icon-bar"></span>
 			      		</button>
-			      		<a class="navbar-brand" href="#"><span id="brand-text">Белая Ночь</span></a>
+			      		<a class="navbar-brand" href="http://whitenight.info/"><span id="brand-text">Белая Ночь</span></a>
 			    	</div>
 				</div>
 
 				<div class="row navigate colapse navbar-collapse"
 				  id="bs-example-navbar-collapse-1"> 
 					<div class="col-sm-2 col-sm-offset-3 header-text nav-text">
-						<a href="http://127.0.0.1:8000/static/index.html">Главная</a></div>
+						<a href="http://whitenight.info/">Главная</a></div>
 					<div class="col-sm-2 header-text nav-text">
-						<a href="http://127.0.0.1:8000/item">Список товаров</a></div>
+						<a href="http://whitenight.info/item">Список товаров</a></div>
 					<div class="col-sm-2 header-text nav-text">
-						<a href="http://127.0.0.1:8000/static/contacts.html">Контакты</a>
+						<a href="http://whitenight.info/contacts.html">Контакты</a>
 					</div>
 				</div>
 			</nav>
@@ -74,7 +74,9 @@
 <div class="footer-bg">
 	<div class="container" id="all-all-footer">
 		<div class="all-footer row" id="footer">
-			<img src="http://127.0.0.1:8000/static/img/logo.png" id="footer-logo">
+			<a href="http://whitenight.info/">
+				<img src="http://whitenight.info/static/img/logo.png" id="footer-logo">
+			</a>
 			<div class="contacts">
 				<div class="contacts-data">
 					<ul>
@@ -94,8 +96,8 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	
-	<script src="http://127.0.0.1:8000/static/js/jquery.magnific-popup.js"></script>
-	<script src="http://127.0.0.1:8000/static/js/common.js"></script>
+	<script src="http://whitenight.info/static/js/jquery.magnific-popup.js"></script>
+	<script src="http://whitenight.info/static/js/common.js"></script>
 	<script type="text/javascript">
 		function InsertID (id) {
 			document.getElementById("hidden_input").value = id;
